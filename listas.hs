@@ -24,8 +24,8 @@ meuReverso (x:xs) = meuReverso xs ++ [x]
 isPalindromo :: (Eq a) => [a] -> Bool
 isPalindromo (a) = (a) == meuReverso (a)
 
-compact :: (Eq a) => [a] -> [a]
-compact [] = []
-compact (x:xs)
-  | elem x xs = compact xs
-  | otherwise = [x] ++ compact xs
+compress :: (Eq a) => [a] -> [a]
+compress [] = []
+compress (x:xs)
+  | elem x xs = compress xs
+  | otherwise = [x] ++ compress xs
